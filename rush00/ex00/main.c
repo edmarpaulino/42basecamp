@@ -1,3 +1,4 @@
+#include <unistd.h>
 void	rush	(int	x, int	y);
 int		convert	(char	*parameter);
 
@@ -6,10 +7,11 @@ int	main(int	argc, char	*argv[])
 	int	col;
 	int	row;
 
+	col = 0;
+	row = 0;
 	if (argc != 3)
 	{
-		col = 5;
-		row = 5;
+		write(2, "Error! The number of parameters are different from 2.\n", 54);
 	}
 	else
 	{
