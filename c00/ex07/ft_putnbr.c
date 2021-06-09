@@ -6,7 +6,7 @@
 /*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 00:54:42 by edpaulin          #+#    #+#             */
-/*   Updated: 2021/06/09 01:44:37 by edpaulin         ###   ########.fr       */
+/*   Updated: 2021/06/09 14:13:42 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,14 @@ void	ft_putnbr(int	nb)
 {
 	int	int_num;
 	int	num_size;
-	
-	if (nb == MAX_NEGATIVE_INT)
+
+	if (nb == 0)
+	{
+		ft_putchar('0');
+		ft_putchar('\n');
+		return ;
+	}
+	else if (nb == MAX_NEGATIVE_INT)
 		int_num = -147483648;
 	else
 		int_num = nb;
@@ -29,9 +35,9 @@ void	ft_putnbr(int	nb)
 	{
 		int_num -= (int_num * 2);
 		num_size = ft_counter(int_num);
-		write(1, "-", 1);
+		ft_putchar('-');
 		if (nb == MAX_NEGATIVE_INT)
-			write(1, "2", 1);
+			ft_putchar('2');
 	}
 	else
 		num_size = ft_counter(int_num);
@@ -68,7 +74,7 @@ void	ft_calc(int	int_num, int	num_size)
 		ft_putchar((rest % 10) + 48);
 		num_size--;
 	}
-	write(1, "\n", 1);
+	ft_putchar('\n');
 }
 
 void	ft_putchar(char	c)
