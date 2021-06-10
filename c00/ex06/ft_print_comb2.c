@@ -5,56 +5,41 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/08 22:28:04 by edpaulin          #+#    #+#             */
-/*   Updated: 2021/06/08 22:28:05 by edpaulin         ###   ########.fr       */
+/*   Created: 2021/06/09 23:31:32 by edpaulin          #+#    #+#             */
+/*   Updated: 2021/06/10 00:07:45 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-void	ft_putchar(char	n1, char	n2, char	n3, char	n4);
-
-struct	s_number
-{
-	char	n1;
-	char	n2;
-	char	n3;
-	char	n4;
-};
+void	ft_putchar(char	c);
 
 void	ft_print_comb2(void)
 {
-	struct s_number	perm;
+	int	first;
+	int	second;
 
-	perm.n1 = '0';
-	while (perm.n1 <= '9')
+	first = 0;
+	while (first <= 98)
 	{
-		perm.n2 = '0';
-		while (perm.n2 < '9' && perm.n2 != perm.n4)
+		second = first;
+		while (++second <= 99)
 		{
-			perm.n3 = perm.n1;
-			while (perm.n3 <= '9')
+			ft_putchar((first / 10) + '0');
+			ft_putchar((first % 10) + '0');
+			ft_putchar(' ');
+			ft_putchar((second / 10) + '0');
+			ft_putchar((second % 10) + '0');
+			if ((first / 10) != 9 || (first % 10) != 8)
 			{
-				perm.n4 = perm.n2 + 1;
-				while (perm.n4 <= '9')
-				{
-					ft_putchar(perm.n1, perm.n2, perm.n3, perm.n4);
-					perm.n4++;
-				}
-				perm.n3++;
+				ft_putchar(',');
+				ft_putchar(' ');
 			}
-			perm.n2++;
 		}
-		perm.n1++;
+		first++;
 	}
 }
 
-void	ft_putchar(char	n1, char	n2, char	n3, char	n4)
+void	ft_putchar(char	c)
 {
-	write(1, &n1, 1);
-	write(1, &n2, 1);
-	write(1, " ", 1);
-	write(1, &n3, 1);
-	write(1, &n4, 1);
-	if ((n1 + n2 + n3 + n4) < 227)
-		write(1, ", ", 2);
+	write(1, &c, 1);
 }

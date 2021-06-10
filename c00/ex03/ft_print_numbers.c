@@ -6,20 +6,19 @@
 /*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 02:39:54 by edpaulin          #+#    #+#             */
-/*   Updated: 2021/06/09 13:46:13 by edpaulin         ###   ########.fr       */
+/*   Updated: 2021/06/09 23:17:59 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 void	ft_print_numbers(void)
 {
-	char	i;
+	char	num;
 
-	i = '0';
-	while (i <= '9')
+	num = '0';
+	while (num <= '9')
 	{
-		write(1, &i, 1);
-		i++;
+		write(1, &num, 1);
+		num++;
 	}
-	write(1, "\n", 1);
 }

@@ -5,21 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/04 02:04:33 by edpaulin          #+#    #+#             */
-/*   Updated: 2021/06/09 13:32:49 by edpaulin         ###   ########.fr       */
+/*   Created: 2021/06/09 23:08:02 by edpaulin          #+#    #+#             */
+/*   Updated: 2021/06/09 23:11:20 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 void	ft_print_alphabet(void)
 {
-	int	i;
+	char	letter;
 
-	i = 97;
-	while (i < 123)
+	letter = 'a';
+	while (letter <= 'z')
 	{
-		write(1, &i, 1);
-		i++;
+		write(1, &letter, 1);
+		letter++;
 	}
-	write(1, "\n", 1);
 }

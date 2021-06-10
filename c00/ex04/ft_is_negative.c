@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/04 12:32:39 by edpaulin          #+#    #+#             */
-/*   Updated: 2021/06/04 20:33:52 by edpaulin         ###   ########.fr       */
+/*   Created: 2021/06/09 23:18:54 by edpaulin          #+#    #+#             */
+/*   Updated: 2021/06/09 23:20:41 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@ void	ft_is_negative(int n)
 {
 	if (n < 0)
 	{
-		write(1, "N\n", 2);
+		write(1, "N", 1);
 	}
 	else
 	{
-		write(1, "P\n", 2);
+		write(1, "P", 1);
 	}
 }

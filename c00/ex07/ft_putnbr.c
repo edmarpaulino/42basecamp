@@ -5,13 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/09 00:54:42 by edpaulin          #+#    #+#             */
-/*   Updated: 2021/06/09 14:13:42 by edpaulin         ###   ########.fr       */
+/*   Created: 2021/06/10 00:10:59 by edpaulin          #+#    #+#             */
+/*   Updated: 2021/06/10 01:55:43 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#define MAX_NEGATIVE_INT -2147483648
 int		ft_counter(int	nb);
 void	ft_calc(int	nb, int	num_size);
 void	ft_putchar(char	c);
@@ -24,20 +23,20 @@ void	ft_putnbr(int	nb)
 	if (nb == 0)
 	{
 		ft_putchar('0');
-		ft_putchar('\n');
 		return ;
 	}
-	else if (nb == MAX_NEGATIVE_INT)
-		int_num = -147483648;
+	else if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return ;
+	}
 	else
 		int_num = nb;
 	if (nb < 0)
 	{
-		int_num -= (int_num * 2);
+		int_num *= -1;
 		num_size = ft_counter(int_num);
 		ft_putchar('-');
-		if (nb == MAX_NEGATIVE_INT)
-			ft_putchar('2');
 	}
 	else
 		num_size = ft_counter(int_num);
@@ -74,7 +73,6 @@ void	ft_calc(int	int_num, int	num_size)
 		ft_putchar((rest % 10) + 48);
 		num_size--;
 	}
-	ft_putchar('\n');
 }
 
 void	ft_putchar(char	c)
