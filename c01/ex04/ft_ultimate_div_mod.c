@@ -5,19 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/11 02:02:51 by edpaulin          #+#    #+#             */
-/*   Updated: 2021/06/11 02:02:52 by edpaulin         ###   ########.fr       */
+/*   Created: 2021/06/14 23:07:27 by edpaulin          #+#    #+#             */
+/*   Updated: 2021/06/14 23:07:28 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_ultimate_div_mod(int	*a, int	*b)
 {
-	int	c;
+	int	swap;
 
-	if (*b != 0)
-	{
-		c = *a / *b;
-		*b = *a % *b;
-		*a = c;
-	}
+	swap = *a / *b;
+	*b = *a % *b;
+	*a = swap;
 }

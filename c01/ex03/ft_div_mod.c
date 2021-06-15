@@ -5,16 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/11 02:02:46 by edpaulin          #+#    #+#             */
-/*   Updated: 2021/06/11 02:02:47 by edpaulin         ###   ########.fr       */
+/*   Created: 2021/06/14 23:07:12 by edpaulin          #+#    #+#             */
+/*   Updated: 2021/06/14 23:07:14 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_div_mod(int	a, int	b, int	*div, int	*mod)
 {
-	if (b != 0)
-	{
-		*div = a / b;
-		*mod = a % b;
-	}
+	*div = a / b;
+	*mod = a % b;
 }

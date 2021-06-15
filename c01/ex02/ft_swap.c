@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/11 02:02:41 by edpaulin          #+#    #+#             */
-/*   Updated: 2021/06/11 02:02:42 by edpaulin         ###   ########.fr       */
+/*   Created: 2021/06/14 23:07:01 by edpaulin          #+#    #+#             */
+/*   Updated: 2021/06/14 23:07:02 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_swap(int	*a, int	*b)
 {
-	int	c;
+	int	swap;
 
-	c = *a;
+	swap = *a;
 	*a = *b;
-	*b = c;
+	*b = swap;
 }

@@ -5,24 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/11 02:03:48 by edpaulin          #+#    #+#             */
-/*   Updated: 2021/06/11 12:33:09 by edpaulin         ###   ########.fr       */
+/*   Created: 2021/06/14 23:08:06 by edpaulin          #+#    #+#             */
+/*   Updated: 2021/06/14 23:08:06 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_sort_int_tab(int	*tab, int	size)
 {
 	int	i;
-	int	aux;
+	int	swap;
 
 	i = 0;
-	while (i <= size)
+	while (i < size)
 	{
 		if (tab[i] > tab[i + 1])
 		{
-			aux = tab[i + 1];
+			swap = tab[i + 1];
 			tab[i + 1] = tab[i];
-			tab[i] = aux;
+			tab[i] = swap;
 			i = 0;
 		}
 		else
