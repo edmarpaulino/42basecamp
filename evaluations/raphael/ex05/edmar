@@ -1,0 +1,2 @@
+#! /bin/sh
+[ -e .gitignore ] && ls -a $(cat .gitignore) 2>/dev/null

@@ -1,0 +1,4 @@
+s1: 1234567, s2: 12345AAA
+N = 0          | N = 2          | N = 6            | N = 9
+og_strncmp = 0 | og_strncmp = 0 | og_strncmp = -11 | og_strncmp = -11
+ft_strncmp = 0 | ft_strncmp = 0 | ft_strncmp = -11 | ft_strncmp = -11
